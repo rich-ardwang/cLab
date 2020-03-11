@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.902
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "linux_tcp_don", "linux_tcp_don\linux_tcp_don.vcxproj", "{058E53F7-E831-457B-990A-8495493DB43E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tattack_ttcpC", "Tattack_ttcpC\Tattack_ttcpC.vcxproj", "{6D0DAD72-5B6D-4F1A-BF45-ADC8892104BE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Debug|ARM64 = Debug|ARM64
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|ARM = Release|ARM
+		Release|ARM64 = Release|ARM64
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{058E53F7-E831-457B-990A-8495493DB43E}.Debug|ARM.ActiveCfg = Debug|ARM
+		{058E53F7-E831-457B-990A-8495493DB43E}.Debug|ARM.Build.0 = Debug|ARM
+		{058E53F7-E831-457B-990A-8495493DB43E}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{058E53F7-E831-457B-990A-8495493DB43E}.Debug|ARM64.Build.0 = Debug|ARM64
+		{058E53F7-E831-457B-990A-8495493DB43E}.Debug|x64.ActiveCfg = Debug|x64
+		{058E53F7-E831-457B-990A-8495493DB43E}.Debug|x64.Build.0 = Debug|x64
+		{058E53F7-E831-457B-990A-8495493DB43E}.Debug|x86.ActiveCfg = Debug|x86
+		{058E53F7-E831-457B-990A-8495493DB43E}.Debug|x86.Build.0 = Debug|x86
+		{058E53F7-E831-457B-990A-8495493DB43E}.Release|ARM.ActiveCfg = Release|ARM
+		{058E53F7-E831-457B-990A-8495493DB43E}.Release|ARM.Build.0 = Release|ARM
+		{058E53F7-E831-457B-990A-8495493DB43E}.Release|ARM64.ActiveCfg = Release|ARM64
+		{058E53F7-E831-457B-990A-8495493DB43E}.Release|ARM64.Build.0 = Release|ARM64
+		{058E53F7-E831-457B-990A-8495493DB43E}.Release|x64.ActiveCfg = Release|x64
+		{058E53F7-E831-457B-990A-8495493DB43E}.Release|x64.Build.0 = Release|x64
+		{058E53F7-E831-457B-990A-8495493DB43E}.Release|x86.ActiveCfg = Release|x86
+		{058E53F7-E831-457B-990A-8495493DB43E}.Release|x86.Build.0 = Release|x86
+		{6D0DAD72-5B6D-4F1A-BF45-ADC8892104BE}.Debug|ARM.ActiveCfg = Debug|ARM
+		{6D0DAD72-5B6D-4F1A-BF45-ADC8892104BE}.Debug|ARM.Build.0 = Debug|ARM
+		{6D0DAD72-5B6D-4F1A-BF45-ADC8892104BE}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{6D0DAD72-5B6D-4F1A-BF45-ADC8892104BE}.Debug|ARM64.Build.0 = Debug|ARM64
+		{6D0DAD72-5B6D-4F1A-BF45-ADC8892104BE}.Debug|x64.ActiveCfg = Debug|x64
+		{6D0DAD72-5B6D-4F1A-BF45-ADC8892104BE}.Debug|x64.Build.0 = Debug|x64
+		{6D0DAD72-5B6D-4F1A-BF45-ADC8892104BE}.Debug|x86.ActiveCfg = Debug|x86
+		{6D0DAD72-5B6D-4F1A-BF45-ADC8892104BE}.Debug|x86.Build.0 = Debug|x86
+		{6D0DAD72-5B6D-4F1A-BF45-ADC8892104BE}.Release|ARM.ActiveCfg = Release|ARM
+		{6D0DAD72-5B6D-4F1A-BF45-ADC8892104BE}.Release|ARM.Build.0 = Release|ARM
+		{6D0DAD72-5B6D-4F1A-BF45-ADC8892104BE}.Release|ARM64.ActiveCfg = Release|ARM64
+		{6D0DAD72-5B6D-4F1A-BF45-ADC8892104BE}.Release|ARM64.Build.0 = Release|ARM64
+		{6D0DAD72-5B6D-4F1A-BF45-ADC8892104BE}.Release|x64.ActiveCfg = Release|x64
+		{6D0DAD72-5B6D-4F1A-BF45-ADC8892104BE}.Release|x64.Build.0 = Release|x64
+		{6D0DAD72-5B6D-4F1A-BF45-ADC8892104BE}.Release|x86.ActiveCfg = Release|x86
+		{6D0DAD72-5B6D-4F1A-BF45-ADC8892104BE}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {97B53BDE-31AB-47AC-9164-D690593A92E7}
+	EndGlobalSection
+EndGlobal

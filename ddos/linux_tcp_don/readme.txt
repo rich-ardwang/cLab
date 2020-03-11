@@ -1,0 +1,2 @@
+在Linux开发环境，伪装一个随机的IP地址端口号号，循环攻击某个指定的IP地址端口号或网站，使其瘫痪。
+(Linux development environment, camouflage a random IP address port number, the cycle attack a specified IP address port number or Web site so that it paralyzed.)
