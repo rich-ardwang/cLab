@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="dlr">
+      <UniqueIdentifier>{47c618df-3a9e-43d8-b955-fb52f05fe2c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dlr\release">
+      <UniqueIdentifier>{38668086-6130-4697-9030-7c45d8f0152d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="loader">
+      <UniqueIdentifier>{ed9b7043-9f1b-44cd-beb8-f09dec9e9650}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="loader\bins">
+      <UniqueIdentifier>{79e1fff8-efb2-4161-ba4f-f1dd8ddc9ba6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="loader\src">
+      <UniqueIdentifier>{b0f12ff0-d228-4fdb-bc1f-b3066b48fe5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="loader\src\headers">
+      <UniqueIdentifier>{337fb828-9781-4e5c-907e-c1b27fd90f20}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="midas">
+      <UniqueIdentifier>{0db61b05-0629-4c3b-a33d-f47f6943377e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="midas\bot">
+      <UniqueIdentifier>{01f969a3-a44b-4985-b7e4-b138fb66cb63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="midas\cnc">
+      <UniqueIdentifier>{a342daae-509b-403a-b775-93088ef2f983}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="midas\tools">
+      <UniqueIdentifier>{d6b4c3e9-ea8b-4b15-9d7f-38d9fd59bc9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scripts">
+      <UniqueIdentifier>{6f50fdca-d892-4b7a-9d67-4ebaddd98d9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scripts\images">
+      <UniqueIdentifier>{2d818015-6e73-4820-b5c5-fe231120f6e3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="dlr\build.sh">
+      <Filter>dlr</Filter>
+    </None>
+    <None Include="dlr\release\dlr.arm">
+      <Filter>dlr\release</Filter>
+    </None>
+    <None Include="dlr\release\dlr.arm7">
+      <Filter>dlr\release</Filter>
+    </None>
+    <None Include="dlr\release\dlr.m68k">
+      <Filter>dlr\release</Filter>
+    </None>
+    <None Include="dlr\release\dlr.mips">
+      <Filter>dlr\release</Filter>
+    </None>
+    <None Include="dlr\release\dlr.mpsl">
+      <Filter>dlr\release</Filter>
+    </None>
+    <None Include="dlr\release\dlr.ppc">
+      <Filter>dlr\release</Filter>
+    </None>
+    <None Include="dlr\release\dlr.sh4">
+      <Filter>dlr\release</Filter>
+    </None>
+    <None Include="dlr\release\dlr.spc">
+      <Filter>dlr\release</Filter>
+    </None>
+    <None Include="loader\bins\dlr.arm">
+      <Filter>loader\bins</Filter>
+    </None>
+    <None Include="loader\bins\dlr.arm7">
+      <Filter>loader\bins</Filter>
+    </None>
+    <None Include="loader\bins\dlr.m68k">
+      <Filter>loader\bins</Filter>
+    </None>
+    <None Include="loader\bins\dlr.mips">
+      <Filter>loader\bins</Filter>
+    </None>
+    <None Include="loader\bins\dlr.mpsl">
+      <Filter>loader\bins</Filter>
+    </None>
+    <None Include="loader\bins\dlr.ppc">
+      <Filter>loader\bins</Filter>
+    </None>
+    <None Include="loader\bins\dlr.sh4">
+      <Filter>loader\bins</Filter>
+    </None>
+    <None Include="loader\bins\dlr.spc">
+      <Filter>loader\bins</Filter>
+    </None>
+    <None Include="loader\bins\dlr.x86">
+      <Filter>loader\bins</Filter>
+    </None>
+    <None Include="loader\build.debug.sh">
+      <Filter>loader</Filter>
+    </None>
+    <None Include="loader\build.sh">
+      <Filter>loader</Filter>
+    </None>
+    <None Include="midas\build.sh">
+      <Filter>midas</Filter>
+    </None>
+    <None Include="midas\cnc\admin.go">
+      <Filter>midas\cnc</Filter>
+    </None>
+    <None Include="midas\cnc\api.go">
+      <Filter>midas\cnc</Filter>
+    </None>
+    <None Include="midas\cnc\attack.go">
+      <Filter>midas\cnc</Filter>
+    </None>
+    <None Include="midas\cnc\bot.go">
+      <Filter>midas\cnc</Filter>
+    </None>
+    <None Include="midas\cnc\clientList.go">
+      <Filter>midas\cnc</Filter>
+    </None>
+    <None Include="midas\cnc\constants.go">
+      <Filter>midas\cnc</Filter>
+    </None>
+    <None Include="midas\cnc\database.go">
+      <Filter>midas\cnc</Filter>
+    </None>
+    <None Include="midas\cnc\main.go">
+      <Filter>midas\cnc</Filter>
+    </None>
+    <None Include="midas\tools\scanListen.go">
+      <Filter>midas\tools</Filter>
+    </None>
+    <None Include="scripts\cross-compile.sh">
+      <Filter>scripts</Filter>
+    </None>
+    <None Include="scripts\db.sql">
+      <Filter>scripts</Filter>
+    </None>
+    <None Include="ForumPost.md" />
+    <None Include="LICENSE.md" />
+    <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dlr\main.c">
+      <Filter>dlr</Filter>
+    </ClCompile>
+    <ClCompile Include="loader\src\binary.c">
+      <Filter>loader\src</Filter>
+    </ClCompile>
+    <ClCompile Include="loader\src\connection.c">
+      <Filter>loader\src</Filter>
+    </ClCompile>
+    <ClCompile Include="loader\src\main.c">
+      <Filter>loader\src</Filter>
+    </ClCompile>
+    <ClCompile Include="loader\src\server.c">
+      <Filter>loader\src</Filter>
+    </ClCompile>
+    <ClCompile Include="loader\src\telnet_info.c">
+      <Filter>loader\src</Filter>
+    </ClCompile>
+    <ClCompile Include="loader\src\util.c">
+      <Filter>loader\src</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\bot\attack.c">
+      <Filter>midas\bot</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\bot\attack_app.c">
+      <Filter>midas\bot</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\bot\attack_gre.c">
+      <Filter>midas\bot</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\bot\attack_tcp.c">
+      <Filter>midas\bot</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\bot\attack_udp.c">
+      <Filter>midas\bot</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\bot\checksum.c">
+      <Filter>midas\bot</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\bot\killer.c">
+      <Filter>midas\bot</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\bot\main.c">
+      <Filter>midas\bot</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\bot\rand.c">
+      <Filter>midas\bot</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\bot\resolv.c">
+      <Filter>midas\bot</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\bot\scanner.c">
+      <Filter>midas\bot</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\bot\table.c">
+      <Filter>midas\bot</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\bot\util.c">
+      <Filter>midas\bot</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\tools\badbot.c">
+      <Filter>midas\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\tools\enc.c">
+      <Filter>midas\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\tools\nogdb.c">
+      <Filter>midas\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\tools\single_load.c">
+      <Filter>midas\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="midas\tools\wget.c">
+      <Filter>midas\tools</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="loader\src\headers\binary.h">
+      <Filter>loader\src\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="loader\src\headers\connection.h">
+      <Filter>loader\src\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="loader\src\headers\includes.h">
+      <Filter>loader\src\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="loader\src\headers\server.h">
+      <Filter>loader\src\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="loader\src\headers\telnet_info.h">
+      <Filter>loader\src\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="loader\src\headers\util.h">
+      <Filter>loader\src\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="midas\bot\attack.h">
+      <Filter>midas\bot</Filter>
+    </ClInclude>
+    <ClInclude Include="midas\bot\checksum.h">
+      <Filter>midas\bot</Filter>
+    </ClInclude>
+    <ClInclude Include="midas\bot\includes.h">
+      <Filter>midas\bot</Filter>
+    </ClInclude>
+    <ClInclude Include="midas\bot\killer.h">
+      <Filter>midas\bot</Filter>
+    </ClInclude>
+    <ClInclude Include="midas\bot\protocol.h">
+      <Filter>midas\bot</Filter>
+    </ClInclude>
+    <ClInclude Include="midas\bot\rand.h">
+      <Filter>midas\bot</Filter>
+    </ClInclude>
+    <ClInclude Include="midas\bot\resolv.h">
+      <Filter>midas\bot</Filter>
+    </ClInclude>
+    <ClInclude Include="midas\bot\scanner.h">
+      <Filter>midas\bot</Filter>
+    </ClInclude>
+    <ClInclude Include="midas\bot\table.h">
+      <Filter>midas\bot</Filter>
+    </ClInclude>
+    <ClInclude Include="midas\bot\util.h">
+      <Filter>midas\bot</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="midas\prompt.txt">
+      <Filter>midas</Filter>
+    </Text>
+    <Text Include="ForumPost.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="scripts\images\BVc7qJs.png">
+      <Filter>scripts\images</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

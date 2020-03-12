@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "linux_tcp_don", "linux_tcp_
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tattack_ttcpC", "Tattack_ttcpC\Tattack_ttcpC.vcxproj", "{6D0DAD72-5B6D-4F1A-BF45-ADC8892104BE}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "midas", "midas\midas.vcxproj", "{DA43D284-6C78-4283-BA3E-821D379C7061}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM = Debug|ARM
@@ -51,6 +53,22 @@ Global
 		{6D0DAD72-5B6D-4F1A-BF45-ADC8892104BE}.Release|x64.Build.0 = Release|x64
 		{6D0DAD72-5B6D-4F1A-BF45-ADC8892104BE}.Release|x86.ActiveCfg = Release|x86
 		{6D0DAD72-5B6D-4F1A-BF45-ADC8892104BE}.Release|x86.Build.0 = Release|x86
+		{DA43D284-6C78-4283-BA3E-821D379C7061}.Debug|ARM.ActiveCfg = Debug|ARM
+		{DA43D284-6C78-4283-BA3E-821D379C7061}.Debug|ARM.Build.0 = Debug|ARM
+		{DA43D284-6C78-4283-BA3E-821D379C7061}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{DA43D284-6C78-4283-BA3E-821D379C7061}.Debug|ARM64.Build.0 = Debug|ARM64
+		{DA43D284-6C78-4283-BA3E-821D379C7061}.Debug|x64.ActiveCfg = Debug|x64
+		{DA43D284-6C78-4283-BA3E-821D379C7061}.Debug|x64.Build.0 = Debug|x64
+		{DA43D284-6C78-4283-BA3E-821D379C7061}.Debug|x86.ActiveCfg = Debug|x86
+		{DA43D284-6C78-4283-BA3E-821D379C7061}.Debug|x86.Build.0 = Debug|x86
+		{DA43D284-6C78-4283-BA3E-821D379C7061}.Release|ARM.ActiveCfg = Release|ARM
+		{DA43D284-6C78-4283-BA3E-821D379C7061}.Release|ARM.Build.0 = Release|ARM
+		{DA43D284-6C78-4283-BA3E-821D379C7061}.Release|ARM64.ActiveCfg = Release|ARM64
+		{DA43D284-6C78-4283-BA3E-821D379C7061}.Release|ARM64.Build.0 = Release|ARM64
+		{DA43D284-6C78-4283-BA3E-821D379C7061}.Release|x64.ActiveCfg = Release|x64
+		{DA43D284-6C78-4283-BA3E-821D379C7061}.Release|x64.Build.0 = Release|x64
+		{DA43D284-6C78-4283-BA3E-821D379C7061}.Release|x86.ActiveCfg = Release|x86
+		{DA43D284-6C78-4283-BA3E-821D379C7061}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
