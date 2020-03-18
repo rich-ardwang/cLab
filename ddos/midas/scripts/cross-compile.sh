@@ -21,29 +21,43 @@ apt-get install -y gcc golang electric-fence
 echo "Creating folder /etc/xcompile"
 mkdir /etc/xcompile > /dev/null 2>&1
 
-cd ../cross-compile-bin
-echo "Copy cross-compiler-armv4l.tar.bz2 to /etc/xcompile"
-cp cross-compiler-armv4l.tar.bz2 /etc/xcompile/cross-compiler-armv4l.tar.bz2
-echo "Copy cross-compiler-armv5l.tar.bz2 to /etc/xcompile"
-cp cross-compiler-armv5l.tar.bz2 /etc/xcompile/cross-compiler-armv5l.tar.bz2
-echo "Copy cross-compiler-armv6l.tar.bz2 to /etc/xcompile"
-cp cross-compiler-armv6l.tar.bz2 /etc/xcompile/cross-compiler-armv6l.tar.bz2
-echo "Copy cross-compiler-i586.tar.bz2 to /etc/xcompile"
-cp cross-compiler-i586.tar.bz2 /etc/xcompile/cross-compiler-i586.tar.bz2
-echo "Copy cross-compiler-m68k.tar.bz2 to /etc/xcompile"
-cp cross-compiler-m68k.tar.bz2 /etc/xcompile/cross-compiler-m68k.tar.bz2
-echo "Copy cross-compiler-mips.tar.bz2 to /etc/xcompile"
-cp cross-compiler-mips.tar.bz2 /etc/xcompile/cross-compiler-mips.tar.bz2
-echo "Copy cross-compiler-mipsel.tar.bz2 to /etc/xcompile"
-cp cross-compiler-mipsel.tar.bz2 /etc/xcompile/cross-compiler-mipsel.tar.bz2
-echo "Copy cross-compiler-powerpc.tar.bz2 to /etc/xcompile"
-cp cross-compiler-powerpc.tar.bz2 /etc/xcompile/cross-compiler-powerpc.tar.bz2
-echo "Copy cross-compiler-sh4.tar.bz2 to /etc/xcompile"
-cp cross-compiler-sh4.tar.bz2 /etc/xcompile/cross-compiler-sh4.tar.bz2
-echo "Copy cross-compiler-sparc.tar.bz2 to /etc/xcompile"
-cp cross-compiler-sparc.tar.bz2 /etc/xcompile/cross-compiler-sparc.tar.bz2
 
+#cd ../cross-compile-bin
+#echo "Copy cross-compiler-armv4l.tar.bz2 to /etc/xcompile"
+#cp cross-compiler-armv4l.tar.bz2 /etc/xcompile/cross-compiler-armv4l.tar.bz2
+#echo "Copy cross-compiler-armv5l.tar.bz2 to /etc/xcompile"
+#cp cross-compiler-armv5l.tar.bz2 /etc/xcompile/cross-compiler-armv5l.tar.bz2
+#echo "Copy cross-compiler-armv6l.tar.bz2 to /etc/xcompile"
+#cp cross-compiler-armv6l.tar.bz2 /etc/xcompile/cross-compiler-armv6l.tar.bz2
+#echo "Copy cross-compiler-i586.tar.bz2 to /etc/xcompile"
+#cp cross-compiler-i586.tar.bz2 /etc/xcompile/cross-compiler-i586.tar.bz2
+#echo "Copy cross-compiler-m68k.tar.bz2 to /etc/xcompile"
+#cp cross-compiler-m68k.tar.bz2 /etc/xcompile/cross-compiler-m68k.tar.bz2
+#echo "Copy cross-compiler-mips.tar.bz2 to /etc/xcompile"
+#cp cross-compiler-mips.tar.bz2 /etc/xcompile/cross-compiler-mips.tar.bz2
+#echo "Copy cross-compiler-mipsel.tar.bz2 to /etc/xcompile"
+#cp cross-compiler-mipsel.tar.bz2 /etc/xcompile/cross-compiler-mipsel.tar.bz2
+#echo "Copy cross-compiler-powerpc.tar.bz2 to /etc/xcompile"
+#cp cross-compiler-powerpc.tar.bz2 /etc/xcompile/cross-compiler-powerpc.tar.bz2
+#echo "Copy cross-compiler-sh4.tar.bz2 to /etc/xcompile"
+#cp cross-compiler-sh4.tar.bz2 /etc/xcompile/cross-compiler-sh4.tar.bz2
+#echo "Copy cross-compiler-sparc.tar.bz2 to /etc/xcompile"
+#cp cross-compiler-sparc.tar.bz2 /etc/xcompile/cross-compiler-sparc.tar.bz2
+
+echo "cd /etc/xcompile"
 cd /etc/xcompile
+echo "Download cross-compiler for every platform."
+wget https://www.uclibc.org/downloads/binaries/0.9.30.1/cross-compiler-armv4l.tar.bz2
+wget https://www.uclibc.org/downloads/binaries/0.9.30.1/cross-compiler-armv5l.tar.bz2
+wget https://www.uclibc.org/downloads/binaries/0.9.30.1/cross-compiler-armv6l.tar.bz2
+wget https://www.uclibc.org/downloads/binaries/0.9.30.1/cross-compiler-i586.tar.bz2
+wget https://www.uclibc.org/downloads/binaries/0.9.30.1/cross-compiler-m68k.tar.bz2
+wget https://www.uclibc.org/downloads/binaries/0.9.30.1/cross-compiler-mips.tar.bz2
+wget https://www.uclibc.org/downloads/binaries/0.9.30.1/cross-compiler-mipsel.tar.bz2
+wget https://www.uclibc.org/downloads/binaries/0.9.30.1/cross-compiler-powerpc.tar.bz2
+wget https://www.uclibc.org/downloads/binaries/0.9.30.1/cross-compiler-sh4.tar.bz2
+wget https://www.uclibc.org/downloads/binaries/0.9.30.1/cross-compiler-sparc.tar.bz2
+
 echo "extracting cross-compiler-armv4l.tar.bz2 ..."
 tar -jxf cross-compiler-armv4l.tar.bz2
 echo "extracting cross-compiler-armv5l.tar.bz2 ..."
@@ -100,3 +114,7 @@ export PATH=$PATH:/etc/xcompile/powerpc/bin
 export PATH=$PATH:/etc/xcompile/powerpc-440fp/bin
 export PATH=$PATH:/etc/xcompile/sh4/bin
 export PATH=$PATH:/etc/xcompile/sparc/bin
+
+# Golang
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=$HOME/Documents/go
