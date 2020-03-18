@@ -117,4 +117,4 @@ export PATH=$PATH:/etc/xcompile/sparc/bin
 
 # Golang
 export PATH=$PATH:/usr/local/go/bin
-export GOPATH=$HOME/Documents/go
+export GOPATH=/root/Documents/go
