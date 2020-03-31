@@ -157,12 +157,11 @@ HCURSOR CHashCalculatorDlg::OnQueryDragIcon()
 
 void CHashCalculatorDlg::OnBnClickedOk()
 {
-    // TODO:  在此添加控件通知处理程序代码
+    /*
     std::string text;
     char result_buf[SHA256_OUTPUT_LENGTH];
     int len = SHA256_OUTPUT_LENGTH;
     int ret = sha256_encode(text.c_str(), text.length(), result_buf, len);
-    /*
     if (0 == ret)
         std::cout << "out:" << result_buf << std::endl;
     else
@@ -172,20 +171,41 @@ void CHashCalculatorDlg::OnBnClickedOk()
     int rowCnt = 0;
     int realRowCnt = 0;
     rowCnt = m_editInput.GetLineCount();
-    CString sT;
+    CString hashResult;
     for (int i = 0; i < rowCnt; i++) {
         int len = m_editInput.LineLength(m_editInput.LineIndex(i));
         CString sLineContent;
         m_editInput.GetLine(i, sLineContent.GetBuffer(len), len);
         sLineContent.ReleaseBuffer(len);
         if (!sLineContent.IsEmpty()) {
-            sT += sLineContent;
-            realRowCnt++;
+            std::string lineCtx;
+            lineCtx = CT2A(sLineContent.GetString());
+            char result_buf[SHA256_OUTPUT_LENGTH];
+            int len = SHA256_OUTPUT_LENGTH;
+            int ret = sha256_encode(lineCtx.c_str(), lineCtx.length(), result_buf, len);
+            if (0 == ret) {
+                CString sh256Res(result_buf);
+                hashResult += sh256Res;
+                realRowCnt++;
+            }
         }
     }
+
+    if (realRowCnt > 1)
+    {
+        std::string hx;
+        hx = CT2A(hashResult.GetString());
+        hashResult.Empty();
+        char result_buf[SHA256_OUTPUT_LENGTH];
+        int len = SHA256_OUTPUT_LENGTH;
+        int ret = sha256_encode(hx.c_str(), hx.length(), result_buf, len);
+        if (0 == ret)
+            hashResult = result_buf;
+    }
+
     CString sRowCnt;
     sRowCnt.Format(_T("%d"), realRowCnt);
     SetDlgItemTextW(IDC_EDIT_TOTAL, sRowCnt);
-    SetDlgItemTextW(IDC_EDIT_RESULT, sT);
+    SetDlgItemTextW(IDC_EDIT_RESULT, hashResult);
     //CDialogEx::OnOK();
 }
