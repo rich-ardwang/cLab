@@ -1,11 +1,14 @@
 #include <map>
 #include <set>
 #include <vector>
+#include <mutex>
+#include <thread>
+#include <chrono>
 #include "timer.h"
 
-struct data
+struct recordData
 {
-    data(double a, double b) : d1(a), d2(b) {}
+    recordData(double a, double b) : d1(a), d2(b) {}
 
     double     d1;
     double     d2;
@@ -13,60 +16,68 @@ struct data
 
 struct CTask
 {
-    CTask(int span, data *p) : timeSpan(span), dp(p) {}
-    ~CTask()
+    CTask(const int span, recordData *p) : timeSpan(span), rdp(p) {}
+    inline CTask(const CTask &task)
     {
-        if (dp)
+        this->timeSpan = task.timeSpan;
+        if (task.rdp)
         {
-            delete dp;
-            dp = nullptr;
+            this->rdp = new recordData(*task.rdp);
+        }
+        else
+            this->rdp = nullptr;
+    }
+    inline ~CTask()
+    {
+        if (rdp)
+        {
+            delete rdp;
+            rdp = nullptr;
         }
     }
 
-    int     timeSpan;
-    data    *dp;
+    int            timeSpan;
+    recordData*    rdp;
 };
-
-void handle_task(int spanId)
-{
-    //todo
-}
 
 class CTaskHandler
 {
 public:
-    inline CTaskHandler(int timeSpan, std::vector<CTask*> taskArray)
-    {
-        m_taskArray = taskArray;
-        m_timer = new lava::utils::timer;
-        m_timer->start(1000 * (timeSpan), std::bind(handle_task, timeSpan));
-    }
+    CTaskHandler(int timeSpan, std::vector<CTask*> *pTaskArray);
     ~CTaskHandler();
 
 public:
+    void InsertTask(std::vector<CTask*> *pTaskArray);
+    void RemoveTask(std::vector<CTask*> *pTaskArray);
+    void start();
+    void stop();
 
 private:
-    std::vector<CTask*>     m_taskArray;
+    void CloneTasks(std::vector<CTask*> *target, std::vector<CTask*> *des);
+    void ReleaseTasks(std::vector<CTask*> *p);
+    void handle_task();
+
+private:
+    int                     m_timeSpan;
+    bool                    m_workFinish;
+    bool                    m_start;
+    std::vector<CTask*>*    m_pTaskArray;
     lava::utils::timer*     m_timer;
+    std::mutex              m_mutex;
 };
 
 class CTaskManager
 {
 public:
-    CTaskManager();
-    ~CTaskManager();
+    CTaskManager() {}
+    ~CTaskManager() {}
 
 public:
-    void clearTask();
-    void addTask(CTask *pt);
-    void removeTask(CTask *pt);
+    void clearTask() {}
+    void addTask(std::vector<CTask*> *pt);
+    void removeTask(std::vector<CTask*> *pt);
     void replaceTask(CTask *target, CTask *pt);
 
 private:
-    void handleTask();
-
-private:
-    std::set<int>                          m_timeSpanSet;
-    std::map<int,  >    m_taskCenter;
-    std::set<>          m_timerSet;
+    std::map<int, CTaskHandler*>    m_taskCenter;
 };
